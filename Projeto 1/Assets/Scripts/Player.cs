@@ -12,8 +12,6 @@ public class Player : MonoBehaviour
     private Rigidbody2D rig;
     private Animator anim;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -34,46 +32,39 @@ public class Player : MonoBehaviour
         transform.position += movement * Time.deltaTime * Speed;
 
         if (Input.GetAxis("Horizontal") > 0f)
-
-
         {
             anim.SetBool("walk", true);
             GetComponent<SpriteRenderer>().flipX = true;
-
         }
-        if (Input.GetAxis("Horizontal") < 0f)
-
-
+        else if (Input.GetAxis("Horizontal") < 0f)
         {
             anim.SetBool("walk", true);
             GetComponent<SpriteRenderer>().flipX = false;
-
         }
-        if (Input.GetAxis("Horizontal") == 0f)
-
-
+        else
         {
             anim.SetBool("walk", false);
         }
+    }
 
-}
-
-void Jump()
+    void Jump()
     {
-        if(Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
-            if(!isJumping)
+            if (!isJumping)
             {
+                // Pulo inicial
+                rig.velocity = new Vector2(rig.velocity.x, 0f); // Reseta a velocidade vertical
                 rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
+                isJumping = true;
                 doubleJumping = true;
             }
-            else
+            else if (doubleJumping)
             {
-                if (doubleJumping)
-                {
-                    rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
-                    doubleJumping = false;
-                }
+                // Pulo duplo
+                rig.velocity = new Vector2(rig.velocity.x, 0f); // Reseta a velocidade vertical
+                rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
+                doubleJumping = false;
             }
         }
     }
@@ -89,11 +80,15 @@ void Jump()
             GameController.instance.ShowGameOver();
             Destroy(gameObject);
         }
+        if (collision.gameObject.tag == "Spike")
+        {
+            GameController.instance.ShowGameOver();
+            Destroy(gameObject);
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
         isJumping = true;
     }
-
 }

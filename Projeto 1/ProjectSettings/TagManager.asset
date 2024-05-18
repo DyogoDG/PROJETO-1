@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Water
+  - Spike
   layers:
   - Default
   - TransparentFX
