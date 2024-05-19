@@ -19,4 +19,18 @@ public class NextLevelPoint : MonoBehaviour
             SceneManager.LoadScene(lvlName);
         }
     }
+    public void LoadSceneCreditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+
+    public void LoadScene5()
+    {
+        SceneManager.LoadScene("lvl_5");
+    }
+
+    public void LoadSceneMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
