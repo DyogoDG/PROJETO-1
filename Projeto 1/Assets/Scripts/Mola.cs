@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mola : MonoBehaviour
 {
     private Animator anim;
+    public AudioSource audiosourcemola;
 
     private void Start()
     {
@@ -16,6 +17,7 @@ public class Mola : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
+            audiosourcemola.Play();
             anim.SetTrigger("Jump");
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpforce), ForceMode2D.Impulse);
 

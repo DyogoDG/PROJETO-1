@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rig;
     private Animator anim;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +54,7 @@ public class Player : MonoBehaviour
         {
             if (!isJumping)
             {
-                // Pulo inicial
+                audioSource.Play();
                 rig.velocity = new Vector2(rig.velocity.x, 0f); // Reseta a velocidade vertical
                 rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
                 isJumping = true;
@@ -61,7 +62,7 @@ public class Player : MonoBehaviour
             }
             else if (doubleJumping)
             {
-                // Pulo duplo
+                audioSource.Play();
                 rig.velocity = new Vector2(rig.velocity.x, 0f); // Reseta a velocidade vertical
                 rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
                 doubleJumping = false;

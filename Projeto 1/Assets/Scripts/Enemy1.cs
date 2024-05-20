@@ -37,14 +37,14 @@ public class Enemy1 : MonoBehaviour
             Speed  *= -1;
         }
     }
-    bool playerDestroyed = false;
+    
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Player")
         {
             
             {
-                playerDestroyed = true;
+                
                 GameController.instance.ShowGameOver();
                 Destroy(col.gameObject);
             }

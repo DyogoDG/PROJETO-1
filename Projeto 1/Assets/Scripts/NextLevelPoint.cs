@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class NextLevelPoint : MonoBehaviour
 {
     public string lvlName;
+    public AudioSource audioSource;
 
     public void LoadScene1()
     {
+        audioSource.Play();
         SceneManager.LoadScene("lvl_1");
     }
 
