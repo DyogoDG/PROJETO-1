@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Water
   - Spike
+  - Heart
   layers:
   - Default
   - TransparentFX

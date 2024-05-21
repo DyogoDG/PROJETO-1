@@ -21697,14 +21697,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Over Panel
       objectReference: {fileID: 0}
-    - target: {fileID: 859545276925372835, guid: eeb7ba0be6eaecd49aca9b1bfceac260, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5368845513284391988, guid: eeb7ba0be6eaecd49aca9b1bfceac260, type: 3}
-      propertyPath: m_Color.a
-      value: 0.9843137
-      objectReference: {fileID: 0}
     - target: {fileID: 6525156005013793691, guid: eeb7ba0be6eaecd49aca9b1bfceac260, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -21736,18 +21728,6 @@ PrefabInstance:
     - target: {fileID: 6525156005013793691, guid: eeb7ba0be6eaecd49aca9b1bfceac260, type: 3}
       propertyPath: m_SizeDelta.y
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6525156005013793691, guid: eeb7ba0be6eaecd49aca9b1bfceac260, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 11.374451
-      objectReference: {fileID: 0}
-    - target: {fileID: 6525156005013793691, guid: eeb7ba0be6eaecd49aca9b1bfceac260, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6.1901774
-      objectReference: {fileID: 0}
-    - target: {fileID: 6525156005013793691, guid: eeb7ba0be6eaecd49aca9b1bfceac260, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 6.1901774
       objectReference: {fileID: 0}
     - target: {fileID: 6525156005013793691, guid: eeb7ba0be6eaecd49aca9b1bfceac260, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24141,7 +24121,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2753907, y: 0.048059832, z: -0.43194768}
+  m_LocalPosition: {x: 0.2753907, y: 0.03, z: -0.43194768}
   m_LocalScale: {x: 0.043359984, y: 0.043359984, z: 0.043359984}
   m_ConstrainProportionsScale: 0
   m_Children: []
