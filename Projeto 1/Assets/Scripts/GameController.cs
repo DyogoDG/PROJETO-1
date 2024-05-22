@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public int totalScore;
     public Text scoreText;
     public GameObject gameOver;
+ 
 
     public static GameController instance;
     public AudioSource audioSource;

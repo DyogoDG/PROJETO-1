@@ -6,12 +6,36 @@ using UnityEngine.SceneManagement;
 public class NextLevelPoint : MonoBehaviour
 {
     public string lvlName;
-    public AudioSource audioSource;
+  
 
     public void LoadScene1()
     {
-        audioSource.Play();
+  
         SceneManager.LoadScene("lvl_1");
+    }
+
+    public void LoadScene2()
+    {
+ 
+        SceneManager.LoadScene("lvl_2");
+    }
+
+    public void LoadScene3()
+    {
+  
+        SceneManager.LoadScene("lvl_3");
+    }
+
+    public void LoadScene4()
+    {
+   
+        SceneManager.LoadScene("lvl_4");
+    }
+
+    public void LoadSceneRUN()
+    {
+     
+        SceneManager.LoadScene("RUN...");
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -31,8 +55,22 @@ public class NextLevelPoint : MonoBehaviour
         SceneManager.LoadScene("lvl_5");
     }
 
-    public void LoadSceneMainMenu()
+    public void LoadSceneMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void LoadSceneSelectLevel()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
+
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }
